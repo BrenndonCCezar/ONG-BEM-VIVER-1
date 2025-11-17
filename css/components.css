@@ -1,0 +1,34 @@
+/* Formulários */
+.form{display:grid;gap:var(--space-2)}
+.input,.select,.textarea{width:100%;padding:.75rem .9rem;border:1px solid #e5e7eb;border-radius:8px;background:#fff;transition:border-color .2s,box-shadow .2s}
+.input:focus,.select:focus,.textarea:focus{outline:none;border-color:var(--color-primary);box-shadow:0 0 0 3px var(--color-primary-100)}
+.input--error{border-color:var(--color-danger)} .input--valid{border-color:var(--color-success)}
+.field__error{color:var(--color-danger);font-size:var(--fs-sm);margin-top:4px}
+
+/* Alerts */
+.alert{padding:.75rem 1rem;border-radius:12px;margin:16px 0;border:1px solid transparent}
+.alert--success{background:#ecfdf5;border-color:#a7f3d0;color:#065f46}
+.alert--warning{background:#fffbeb;border-color:#fde68a;color:#92400e}
+.alert--danger{background:#fef2f2;border-color:#fecaca;color:#7f1d1d}
+.alert--info{background:#eff6ff;border-color:#bfdbfe;color:#1e3a8a}
+
+/* Toasts */
+.toasts{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:8px;z-index:50}
+.toast{background:#111827;color:#fff;padding:.75rem 1rem;border-radius:12px;box-shadow:var(--shadow-md);opacity:.96;max-width:360px}
+@media (max-width:480px){.toasts{right:8px;left:8px;bottom:8px}.toast{max-width:100%}}
+
+/* Modal */
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;place-items:center;z-index:60}
+.modal{background:#fff;border-radius:16px;max-width:600px;width:90%;padding:24px;box-shadow:var(--shadow-md)}
+.modal-backdrop.open{display:grid}
+
+/* Badges/Tags */
+.badge{display:inline-block;padding:.25rem .5rem;border-radius:9999px;font-size:var(--fs-xs);line-height:1}
+.badge--cat{background:var(--color-primary-100);color:var(--color-primary-600)}
+.badge--ok{background:#dcfce7;color:#166534}
+.badge--warn{background:#ffedd5;color:#9a3412}
+.badge--danger{background:#fee2e2;color:#991b1b}
+
+/* Progresso (reutilizável) */
+.progress{background:#e5e7eb;border-radius:9999px;height:10px;overflow:hidden}
+.progress__bar{height:100%;width:0;background:var(--color-primary);transition:width .3s}

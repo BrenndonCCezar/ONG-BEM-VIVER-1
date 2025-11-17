@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ONG+ | Plataforma para ONGs</title>
+  <meta name="description" content="Plataforma simples para ONGs divulgarem projetos, captar doações e engajar voluntários.">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+</head>
+
+<div class="toasts" id="toasts" aria-live="polite" aria-atomic="true"></div>
+
+<div class="modal-backdrop" id="modal-backdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <h3 id="modal-title">Título</h3>
+    <p id="modal-body">Conteúdo do modal…</p>
+    <div class="flex gap-1" style="margin-top:16px">
+      <button class="btn btn--ghost" id="modal-close">Fechar</button>
+      <button class="btn btn--primary" id="modal-confirm">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="/">ONG<span>+</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">☰</button>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="./projetos.html">Projetos</a></li>
+          <li><a href="./doar.html">Doar</a></li>
+          <li><a href="./voluntarios.html">Voluntários</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <h1>Conecte apoio ao impacto real</h1>
+          <p>Estrutura simples para apresentar a ONG, seus projetos e como contribuir.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="./doar.html">Quero Doar</a>
+            <a class="btn btn--ghost" href="./projetos.html">Ver Projetos</a>
+          </div>
+        </div>
+        <figure class="hero__media">
+          <img src="./assets/img/hero.jpg" alt="Imagem representativa das atividades da ONG">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Sobre a ONG</h2>
+        </header>
+        <article class="lead">
+          <p>Missão, visão e valores em poucas linhas. Aqui você conta rapidamente o que a ONG faz e qual impacto busca.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Projetos em Destaque</h2>
+          <a class="link" href="./projetos.html">Ver todos</a>
+        </header>
+        <div class="grid cards">
+          <article class="card">
+            <div class="card__media"><img src="./assets/img/hero.jpg" alt="Projeto exemplo"></div>
+            <div class="card__body">
+              <h3>Projeto Exemplo A</h3>
+              <p>Resumo curto do projeto. (Conteúdo estático nesta etapa.)</p>
+              <a class="btn btn--ghost" href="./projetos.html">Ler mais</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media"><img src="./assets/img/hero.jpg" alt="Projeto exemplo"></div>
+            <div class="card__body">
+              <h3>Projeto Exemplo B</h3>
+              <p>Resumo curto do projeto. (Conteúdo estático nesta etapa.)</p>
+              <a class="btn btn--ghost" href="./projetos.html">Ler mais</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <strong>ONG+</strong>
+        <p>Contato: email@exemplo.org | (00) 0000-0000</p>
+      </div>
+     <nav id="site-nav" class="site-nav" aria-label="Principal">
+  <ul>
+    <li><a href="./projetos.html">Projetos</a></li>
+    <li class="has-submenu">
+      <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Institucional</button>
+      <ul class="submenu" aria-label="submenu institucional">
+        <li><a href="./dashboard.html">Transparência</a></li>
+        <li><a href="./voluntarios.html">Voluntários</a></li>
+      </ul>
+    </li>
+    <li><a href="./doar.html">Doar</a></li>
+  </ul>
+</nav>
+
+    </div>
+    <p class="legal">© <span id="ano"></span> ONG+. Todos os direitos reservados.</p>
+  </footer>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

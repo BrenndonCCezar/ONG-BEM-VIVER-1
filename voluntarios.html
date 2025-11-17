@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Voluntários | ONG+</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+</head>
+<body>
+<main class="container section">
+  <h1>Seja Voluntário</h1>
+  <form class="form" novalidate>
+    <label for="v-nome">Nome</label>
+    <input id="v-nome" class="input" placeholder="Seu nome">
+
+    <label for="v-email">E-mail</label>
+    <input id="v-email" class="input" type="email" placeholder="nome@exemplo.com">
+
+    <label for="v-area">Área de interesse</label>
+    <select id="v-area" class="input">
+      <option>Comunicação</option>
+      <option>Eventos</option>
+      <option>Administrativo</option>
+    </select>
+
+    <button class="btn btn--primary" type="submit">Enviar</button>
+  </form>
+</main>
+<script type="module" src="./js/app.js"></script>
+</body>
+</html>

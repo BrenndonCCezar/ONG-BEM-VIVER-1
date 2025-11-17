@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Post | ONG+</title>
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+</head>
+<body>
+<main class="container section"><article id="post"></article></main>
+<script type="module">
+  import { getDB } from './js/store.js';
+  const db = getDB();
+  const params = new URLSearchParams(location.search);
+  const id = Number(params.get('id'));
+  const post = (db.posts||[]).find(p=>p.id===id) || {titulo:'Post não encontrado', data:new Date().toISOString(), conteudo:'...' };
+  document.getElementById('post').innerHTML = `<h1>${post.titulo}</h1><small>${new Date(post.data).toLocaleDateString('pt-BR')}</small><div>${post.conteudo||''}</div>`;
+</script>
+</body>
+</html>
