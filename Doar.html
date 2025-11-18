@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doar | ONG BEM VIVER</title>
+
+  <!-- usa seus CSS já existentes -->
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/theme-bemviver.css">
+
+</head>
+<body>
+
+  <!-- HEADER PADRÃO (mesmo das outras páginas) -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html">ONG BEM VIVER<span>+</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">☰</button>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="./projetos.html">Projetos</a></li>
+          <li><a href="./doar.html" aria-current="page">Doar</a></li>
+          <li><a href="./voluntarios.html">Voluntários</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="container section">
+    <h1>Faça a diferença hoje</h1>
+    <p class="lead">Sua doação financia resgates, consultas, vacinas, castrações e ração.</p>
+
+    <div class="grid cards" style="margin-top:16px">
+      <!-- 1) PIX -->
+      <article class="card">
+        <div class="card__body">
+          <h3>Doe via Pix</h3>
+          <p>Copie nossa chave Pix ou escaneie o QR Code para doar qualquer valor.</p>
+
+          <!-- DADOS DO PIX — TROQUE PELOS SEUS -->
+          <p><strong>Chave Pix:</strong> <code id="pix-chave">bemviver@gmail.org</code></p>
+          <p>Favorecido: ONG BEM VIVER • CNPJ: 45.452.412/0001-14</p>
+
+          <!-- QR CODE: coloque o arquivo em ./assets/img/pix-qr.png -->
+          <figure style="margin:12px 0">
+            <img
+              src="./assets/img/pix-qr.png"
+              alt="QR Code para doação por Pix da ONG BEM VIVER"
+              width="256" height="256" loading="lazy"
+              style="max-width:200px;width:100%;height:auto;border:1px solid #eee;border-radius:8px;display:block">
+            <figcaption style="font-size:14px;color:#666;margin-top:6px">
+              Aponte a câmera do seu banco para doar via Pix.
+            </figcaption>
+          </figure>
+
+          <div class="flex gap-1" style="margin-top:10px">
+            <button class="btn btn--primary"
+              onclick="navigator.clipboard.writeText(document.getElementById('pix-chave').textContent)">
+              Copiar chave Pix
+            </button>
+            <a class="btn btn--ghost" href="./assets/img/pix-qr.png" target="_blank" rel="noopener">
+              Abrir QR em tela cheia
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2) ITENS -->
+      <article class="card">
+        <div class="card__body">
+          <h3>Doar itens</h3>
+          <ul class="list">
+            <li>Ração seca e úmida</li>
+            <li>Tapetes higiênicos / jornal</li>
+            <li>Vermífugos / antipulgas</li>
+            <li>Produtos de limpeza</li>
+          </ul>
+          <p><strong>Entrega:</strong> Rua BV, 123 — Bairro Natal — Sete Lagoas (Seg–Sex, 9h–17h). Fale conosco para combinar coleta.</p>
+        </div>
+      </article>
+
+      <!-- 3) RECORRENTE -->
+      <article class="card">
+        <div class="card__body">
+          <h3>Torne-se doador recorrente</h3>
+          <p>Com <strong>R$ 20/mês</strong> já garantimos vacinas, vermífugos e ração de emergência.</p>
+          <a class="btn btn--ghost" href="./contato.html">Quero ser recorrente</a>
+          <p class="muted">Transparência: publicaremos relatórios mensais de uso dos recursos.</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- JS global (o seu) -->
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

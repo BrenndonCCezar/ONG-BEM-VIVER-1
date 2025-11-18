@@ -3,29 +3,55 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dashboard | ONG+</title>
+  <title>Dashboard | ONG BEM VIVER</title>
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/layout.css">
   <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/theme-bemviver.css">
 </head>
 <body>
-<main class="container section">
-  <h1>Dashboard (demo)</h1>
 
-  <div class="kpis">
-    <div class="kpi"><strong>Doações</strong><div>R$ 0</div></div>
-    <div class="kpi"><strong>Voluntários</strong><div>0</div></div>
-    <div class="kpi"><strong>Projetos</strong><div>0</div></div>
-  </div>
+  <!-- HEADER PADRÃO -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html">ONG BEM VIVER<span>+</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">☰</button>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="./projetos.html">Projetos</a></li>
+          <li><a href="./doar.html">Doar</a></li>
+          <li><a href="./voluntarios.html">Voluntários</a></li>
+          <li><a href="./dashboard.html" aria-current="page">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <h2 style="margin-top:16px">Últimas Doações</h2>
-  <table class="table">
-    <thead><tr><th>Data</th><th>Nome</th><th>Valor</th></tr></thead>
-    <tbody>
-      <tr><td>-</td><td>-</td><td>-</td></tr>
-    </tbody>
-  </table>
-</main>
-<script type="module" src="./js/app.js"></script>
+  <main class="container section">
+    <h1>Transparência</h1>
+    <div class="grid cards">
+      <article class="card">
+        <div class="card__body">
+          <h3>Arrecadação (Mês)</h3>
+          <p>R$ 00.000,00</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <h3>Despesas (Mês)</h3>
+          <p>R$ 00.000,00</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <h3>Castrações realizadas</h3>
+          <p>0</p>
+        </div>
+      </article>
+    </div>
+    <p class="lead">Publicaremos aqui relatórios mensais e notas fiscais (PDF) para prestação de contas.</p>
+  </main>
+
+  <script type="module" src="./js/app.js"></script>
 </body>
 </html>

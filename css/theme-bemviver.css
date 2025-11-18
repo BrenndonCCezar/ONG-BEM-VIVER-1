@@ -1,0 +1,167 @@
+/* =========================================================
+   BEM VIVER — Tema de Cores (caramelo + azul)
+   Este arquivo sobrescreve apenas o necessário via variáveis
+   e pequenos ajustes de componentes.
+   ========================================================= */
+
+/* -------- Paleta principal (claro) -------- */
+:root{
+  /* Fundos e texto */
+  --color-bg:#FFF8F0;          /* creme */
+  --color-surface:#F8E8D3;     /* cartão/claro */
+  --color-text:#3F2A1D;        /* café */
+  --color-muted:#4F6573;       /* azul-acinzentado p/ textos secundários */
+
+  /* Primária = Caramelo (CTAs, ênfases calorosas) */
+  --color-primary:#EEA657;     /* caramelo */
+  --color-primary-600:#C98E56; /* caramelo escurecido para hover */
+  --color-primary-100:#F3E0C5; /* caramelo bem claro (foco, chips) */
+
+  /* Secundária = Azul institucional (links, cabeçalho, navegação) */
+  --color-secondary:#143F62; 
+  --color-secondary-600:#0E2E4A;
+
+  /* Estados / feedback */
+  --color-success:#95BD4B;     /* verde da marca */
+  --color-warning:#D0903B;     /* âmbar mais quente p/ combinar com caramelo */
+  --color-danger:#C2452E;      /* alerta */
+  --color-info:#8099A4;        /* informativo */
+}
+
+/* -------- Hero com degradê suave caramelo -------- */
+.hero{
+  background: linear-gradient(180deg, #FFF, var(--color-primary-100));
+}
+
+/* -------- Cabeçalho / navegação -------- */
+.site-header{ background:#fff; border-bottom:1px solid rgba(20,63,98,.10) }
+.logo span{ color:var(--color-primary) }
+
+/* Destaque sutil para o link Doar no menu */
+.site-nav a[href$="doar.html"]{
+  background: var(--color-primary);
+  color:#1F2A2E; /* bom contraste sobre caramelo */
+  border-radius: 999px;
+  padding: .5rem .8rem;
+  font-weight:700;
+}
+.site-nav a[href$="doar.html"]:hover{
+  background: var(--color-primary-600);
+}
+
+/* Botão hamburguer acessível em fundo claro */
+.nav-toggle{ color: var(--color-secondary) }
+
+/* -------- Botões -------- */
+.btn--primary{
+  background: var(--color-primary);
+  color:#182026;
+}
+.btn--primary:hover{ background: var(--color-primary-600) }
+
+.btn--ghost{
+  background:#fff;
+  border-color: #e6d9c7;
+  color: var(--color-secondary);
+}
+.btn--ghost:hover{
+  border-color: var(--color-secondary);
+  color: var(--color-secondary-600);
+}
+
+/* Foco acessível (usa caramelo claro) */
+.btn:focus, .site-nav a:focus, .submenu-toggle:focus, .site-footer a:focus{
+  outline:3px solid var(--color-primary-100);
+  outline-offset:2px;
+}
+
+/* -------- Cards -------- */
+.card{
+  background:#fff;
+  border-color:#eadfcd;
+}
+.card:hover{
+  border-color:#e2d4bd;
+  box-shadow: 0 8px 18px rgba(20,63,98,.08);
+}
+.card__media img{
+  /* mantém seu aspect-ratio 16/9 do layout.css */
+  filter: saturate(1.02) contrast(1.02);
+}
+
+/* -------- Links utilitários -------- */
+.link{ color: var(--color-secondary) }
+.link:hover{ text-decoration: underline }
+
+/* -------- Footer -------- */
+.site-footer{ background:#fff; border-top:1px solid rgba(20,63,98,.10) }
+.legal{ color: var(--color-muted) }
+
+/* -------- Formulários -------- */
+.input,.select,.textarea{
+  border-color:#e6d9c7;
+  background:#fff;
+}
+.input:focus,.select:focus,.textarea:focus{
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(20,63,98,.15);
+}
+
+/* -------- Alerts harmônicos -------- */
+.alert--success{ background: #EEF7E1; border-color:#CFE7A8; color:#345616 }
+.alert--warning{ background: #FFF3E0; border-color:#F4D6A6; color:#7A4E12 }
+.alert--danger{  background: #FCEBE8; border-color:#F2C0B6; color:#6F2A20 }
+.alert--info{    background: #EDF3F6; border-color:#CDDBE4; color:#25475C }
+
+/* -------- Progress bar na cor caramelo -------- */
+.progress{ background:#eadfcd }
+.progress__bar{ background: var(--color-primary) }
+
+/* -------- Badges / tags ajustadas -------- */
+.badge--cat{
+  background: var(--color-primary-100);
+  color: var(--color-primary-600);
+}
+
+/* -------- Tabelas / KPIs -------- */
+.kpi{ border-color:#eadfcd }
+.table{ border-color:#eadfcd }
+.table th,.table td{ border-bottom-color:#eadfcd }
+.table thead th{ background: var(--color-surface) }
+
+/* -------- Submenu (hover) com cor do tema -------- */
+.submenu a:hover,.submenu a:focus{
+  background: var(--color-primary-100);
+}
+
+/* -------- Dark mode (opcional, baseado no sistema) -------- */
+@media (prefers-color-scheme: dark){
+  :root{
+    --color-bg:#1E1B16;
+    --color-surface:#222018;
+    --color-text:#F7F5F2;
+    --color-muted:#B8C4CC;
+
+    --color-primary:#E7A050;
+    --color-primary-600:#C98E56;
+    --color-primary-100:#4A3A29;
+
+    --color-secondary:#9BC3D6;    /* azul claro para links em dark */
+    --color-secondary-600:#CDE1EA;
+
+    --color-success:#A5CF60;
+    --color-warning:#E2A65A;
+    --color-danger:#E06B52;
+    --color-info:#9CB1BC;
+  }
+
+  .site-header, .site-footer{ background:#201D17; border-color:#2A2620 }
+  .card{ background:#262219; border-color:#332D23 }
+  .card:hover{ border-color:#3A3429; box-shadow: 0 10px 20px rgba(0,0,0,.35) }
+
+  .btn--ghost{ background:#262219; border-color:#3A3429; color:#EDE8E2 }
+  .btn--ghost:hover{ border-color:#EDE8E2; color:#FFF }
+
+  .table{ background:#262219; border-color:#3A3429 }
+  .table thead th{ background:#2C271E }
+}

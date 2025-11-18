@@ -3,32 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ONG+ | Plataforma para ONGs</title>
+  <title>ONG BEM VIVER | Plataforma para ONGs</title>
   <meta name="description" content="Plataforma simples para ONGs divulgarem projetos, captar doações e engajar voluntários.">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/layout.css">
   <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/theme-bemviver.css">
+
 </head>
+<body>
+  <!-- utilidades globais -->
+  <div class="toasts" id="toasts" aria-live="polite" aria-atomic="true"></div>
 
-<div class="toasts" id="toasts" aria-live="polite" aria-atomic="true"></div>
-
-<div class="modal-backdrop" id="modal-backdrop" hidden>
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <h3 id="modal-title">Título</h3>
-    <p id="modal-body">Conteúdo do modal…</p>
-    <div class="flex gap-1" style="margin-top:16px">
-      <button class="btn btn--ghost" id="modal-close">Fechar</button>
-      <button class="btn btn--primary" id="modal-confirm">Confirmar</button>
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <h3 id="modal-title">Título</h3>
+      <p id="modal-body">Conteúdo do modal…</p>
+      <div class="flex gap-1" style="margin-top:16px">
+        <button class="btn btn--ghost" id="modal-close">Fechar</button>
+        <button class="btn btn--primary" id="modal-confirm">Confirmar</button>
+      </div>
     </div>
   </div>
-</div>
 
-<body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header__inner">
-      <a class="logo" href="/">ONG<span>+</span></a>
+      <a class="logo" href="./index.html">ONG BEM VIVER<span>+</span></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">☰</button>
       <nav id="site-nav" class="site-nav" aria-label="Principal">
         <ul>
@@ -41,55 +44,68 @@
     </div>
   </header>
 
+  <!-- CONTEÚDO -->
   <main id="conteudo">
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero__grid">
         <div>
-          <h1>Conecte apoio ao impacto real</h1>
-          <p>Estrutura simples para apresentar a ONG, seus projetos e como contribuir.</p>
+          <h1>Apoie esta causa já!</h1>
           <div class="hero__actions">
             <a class="btn btn--primary" href="./doar.html">Quero Doar</a>
             <a class="btn btn--ghost" href="./projetos.html">Ver Projetos</a>
           </div>
         </div>
         <figure class="hero__media">
-          <img src="./assets/img/hero.jpg" alt="Imagem representativa das atividades da ONG">
+          <img src="./assets/img/abrigo-para-caes.jpg" alt="Imagem representativa das atividades da ONG">
         </figure>
       </div>
     </section>
 
+    <!-- SOBRE -->
     <section class="section">
       <div class="container">
         <header class="section__header">
           <h2>Sobre a ONG</h2>
         </header>
         <article class="lead">
-          <p>Missão, visão e valores em poucas linhas. Aqui você conta rapidamente o que a ONG faz e qual impacto busca.</p>
+          <p><strong>MISSÃO:</strong> Resgatar cães em situação de vulnerabilidade, reabilitar com cuidado veterinário e afeto, e promover adoção responsável, educação comunitária e controle populacional por meio de castrações e campanhas.</p>
+          <p><strong>VISÃO:</strong> Construir uma cidade onde nenhum cão seja invisível: menos abandono, mais lares amorosos e políticas públicas parceiras, tornando-se referência regional em bem-estar animal.</p>
+          <p><strong>VALORES:</strong> Agimos com compaixão e responsabilidade, prezando pela transparência com doadores e parceiros, pela colaboração com voluntários, protetores e clínicas, e pela educação contínua da comunidade, sempre com foco em sustentabilidade, atacando as causas do abandono na origem.</p>
         </article>
       </div>
     </section>
 
+    <!-- PROJETOS EM DESTAQUE (ATUALIZADO) -->
     <section class="section">
       <div class="container">
         <header class="section__header">
           <h2>Projetos em Destaque</h2>
           <a class="link" href="./projetos.html">Ver todos</a>
         </header>
+
         <div class="grid cards">
+          <!-- Destaque 1: Campanha Castração -->
           <article class="card">
-            <div class="card__media"><img src="./assets/img/hero.jpg" alt="Projeto exemplo"></div>
+            <div class="card__media">
+              <img src="./assets/img/campanha-castracao.jpg" alt="Banner da Campanha Castração">
+            </div>
             <div class="card__body">
-              <h3>Projeto Exemplo A</h3>
-              <p>Resumo curto do projeto. (Conteúdo estático nesta etapa.)</p>
-              <a class="btn btn--ghost" href="./projetos.html">Ler mais</a>
+              <h3>Campanha Castração</h3>
+              <p>Mutirão de castração para cães resgatados. Menos abandono, mais saúde e dignidade.</p>
+              <a class="btn btn--ghost" href="./doar.html">Doar</a>
             </div>
           </article>
+
+          <!-- Destaque 2: Campanha de Ração -->
           <article class="card">
-            <div class="card__media"><img src="./assets/img/hero.jpg" alt="Projeto exemplo"></div>
+            <div class="card__media">
+              <img src="./assets/img/campanha-racao.jpg" alt="Banner da Campanha de Ração">
+            </div>
             <div class="card__body">
-              <h3>Projeto Exemplo B</h3>
-              <p>Resumo curto do projeto. (Conteúdo estático nesta etapa.)</p>
-              <a class="btn btn--ghost" href="./projetos.html">Ler mais</a>
+              <h3>Campanha de Ração</h3>
+              <p>Ração para manter os resgatados fortes. Cada doação enche potinhos e garante cuidados.</p>
+              <a class="btn btn--ghost" href="./doar.html">Doar</a>
             </div>
           </article>
         </div>
@@ -97,30 +113,37 @@
     </section>
   </main>
 
+  <!-- RODAPÉ -->
   <footer class="site-footer">
     <div class="container footer__grid">
       <div>
-        <strong>ONG+</strong>
-        <p>Contato: email@exemplo.org | (00) 0000-0000</p>
+        <strong>ONG BEM VIVER</strong>
+        <p>Contato: bemviver@gmail.org | (11) 96547-6578</p>
       </div>
-     <nav id="site-nav" class="site-nav" aria-label="Principal">
-  <ul>
-    <li><a href="./projetos.html">Projetos</a></li>
-    <li class="has-submenu">
-      <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Institucional</button>
-      <ul class="submenu" aria-label="submenu institucional">
-        <li><a href="./dashboard.html">Transparência</a></li>
-        <li><a href="./voluntarios.html">Voluntários</a></li>
-      </ul>
-    </li>
-    <li><a href="./doar.html">Doar</a></li>
-  </ul>
-</nav>
 
+      <!-- id único para o nav do rodapé -->
+      <nav id="footer-nav" class="site-nav" aria-label="Rodapé">
+        <ul>
+          <li><a href="./projetos.html">Projetos</a></li>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Institucional</button>
+            <ul class="submenu" aria-label="submenu institucional">
+              <li><a href="./dashboard.html">Transparência</a></li>
+              <li><a href="./voluntarios.html">Voluntários</a></li>
+            </ul>
+          </li>
+          <li><a href="./doar.html">Doar</a></li>
+        </ul>
+      </nav>
     </div>
-    <p class="legal">© <span id="ano"></span> ONG+. Todos os direitos reservados.</p>
+    <p class="legal">© <span id="ano"></span> ONG BEM VIVER. Todos os direitos reservados.</p>
   </footer>
 
   <script type="module" src="./js/app.js"></script>
+  <script>
+    // garante o ano no rodapé, caso seu app.js não faça
+    const elAno = document.getElementById('ano');
+    if (elAno) elAno.textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
